@@ -4,7 +4,8 @@ import {
   Hydrate,
   QueryClient,
   QueryClientProvider,
-} from '@tanstack/react-query'
+} from '@tanstack/react-query';
+import { Notifications } from '@matine/notifications';
 
 const QueryClients = new QueryClient({
   defaultOptions: {
