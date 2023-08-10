@@ -5,7 +5,7 @@ import {
   QueryClient,
   QueryClientProvider,
 } from '@tanstack/react-query';
-import { Notifications } from '@matine/notifications';
+import { Notifications } from '@mantine/notifications';
 
 const QueryClients = new QueryClient({
   defaultOptions: {
