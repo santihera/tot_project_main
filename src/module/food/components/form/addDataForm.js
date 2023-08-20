@@ -14,7 +14,7 @@ export default function AddDataForm(props) {
             name: '',
             category: '',
             description: '',
-            createBy: '',
+            createdBy: '',
 
         },
 
@@ -22,7 +22,7 @@ export default function AddDataForm(props) {
             name: (value) => handleValidateForm(value, 'Name'),
             category: (value) => handleValidateForm(value, 'Category'),
             description: (value) => handleValidateForm(value, 'Description'),
-            createBy: (value) => handleValidateForm(value, 'Created By'),
+            createdBy: (value) => handleValidateForm(value, 'Created By'),
 
         },
     });

@@ -11,16 +11,16 @@ export async function getFood(id) {
 }
 
 export async function addFood(params) {
-    const data = await API.post(`/add-foods`, params)
+    const data = await API.post(`/add-food`, params)
     return data;
 }
 
 export async function editFood(id, params) {
-    const data = await API.put(`/edit-foods?id=${id}`, params)
+    const data = await API.put(`/edit-food?id=${id}`, params)
     return data;
 }
 
 export async function deleteFood(id) {
-    const data = await API.delete(`/delete-foods?id=${id}`)
+    const data = await API.delete(`/delete-food?id=${id}`)
     return data;
 }

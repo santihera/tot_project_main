@@ -16,14 +16,14 @@ export default function EditDataForm(props) {
             name: '',
             category: '',
             description: '',
-            createBy: '',
+            createdBy: '',
         },
 
         validate: {
             name: (value) => handleValidateForm(value, 'Name'),
             category: (value) => handleValidateForm(value, 'Category'),
             description: (value) => handleValidateForm(value, 'Description'),
-            createBy: (value) => handleValidateForm(value, 'Created By'),
+            createdBy: (value) => handleValidateForm(value, 'Created By'),
         },
     });
 
@@ -32,7 +32,7 @@ export default function EditDataForm(props) {
         form.setFieldValue('name', props.detailData.name);
         form.setFieldValue('category', props.detailData.category);
         form.setFieldValue('description', props.detailData.description);
-        form.setFieldValue('createdBy', props.detailData.createBy);
+        form.setFieldValue('createdBy', props.detailData.createdBy);
     }, [isOpen])
 
     const handleCloseModal = () => {
@@ -73,9 +73,9 @@ export default function EditDataForm(props) {
                 <form onSubmit={form.onSubmit(() => mutate())}>
                     <TextInput
                         withAsterisk
-                        label="Title"
-                        placeholder="Input your title food"
-                        {...form.getInputProps('title')}
+                        label="Name"
+                        placeholder="Input your name food"
+                        {...form.getInputProps('name')}
                     />
                     <Select
                         label="Category"
@@ -102,7 +102,7 @@ export default function EditDataForm(props) {
                         withAsterisk
                         label="CreatedBy"
                         placeholder="Input your createdBy"
-                        {...form.getInputProps('createBy')}
+                        {...form.getInputProps('createdBy')}
                     />
                     <Group align="flex-end" style={{ marginTop: "20px" }}>
                         <Button

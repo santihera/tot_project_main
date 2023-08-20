@@ -24,7 +24,7 @@ export default function FoodPage() {
         createdBy: ''
     });
 
-    const { data: foods, refetch, isFetching } = useQuery(['list-foods', skip], () => getFoods(skip), {
+    const { data: foods, refetch, isFetching } = useQuery(['list-foods', skip], () => getFoods(skip, 'Santi'), {
         initialData: []
     });
 
@@ -109,7 +109,7 @@ export default function FoodPage() {
                                     width: 160,
                                 },
                                 {
-                                    accessor: 'createBy',
+                                    accessor: 'createdBy',
                                     title: 'Created By',
                                     width: 160,
                                 },
