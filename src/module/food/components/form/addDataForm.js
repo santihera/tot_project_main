@@ -65,9 +65,9 @@ export default function AddDataForm(props) {
                 <form onSubmit={form.onSubmit((values) => mutate(values))}>
                     <TextInput
                         withAsterisk
-                        label="Title"
-                        placeholder="Input your title food"
-                        {...form.getInputProps('title')}
+                        label="Name"
+                        placeholder="Input your name food"
+                        {...form.getInputProps('name')}
                     />
                     <Select
                         label="Category"
@@ -94,7 +94,7 @@ export default function AddDataForm(props) {
                         withAsterisk
                         label="CreatedBy"
                         placeholder="Input your createdBy"
-                        {...form.getInputProps('createBy')}
+                        {...form.getInputProps('createdBy')}
                     />
                     <Group align="flex-end" style={{ marginTop: "20px" }}>
                         <Button
