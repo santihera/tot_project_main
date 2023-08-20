@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Group, ActionIcon, Box  } from '@mantine/core';
+import { Group, ActionIcon, Box } from '@mantine/core';
 import { IconSun, IconMoonStars } from '@tabler/icons-react'
 import { Logo } from './_logo';
 

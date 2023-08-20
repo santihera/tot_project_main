@@ -5,9 +5,9 @@ import { IconEdit, IconTrash } from "@tabler/icons-react";
 import { useMutation, useQuery } from '@tanstack/react-query';
 import { DataTable } from "mantine-datatable";
 import { useState } from "react";
-// import AddDataForm from "./components/form/addDataForm";
-// import EditDataForm from "./components/form/editDataform";
-// import { notifications } from '@mantine/notifications';
+import AddDataForm from "./components/form/addDataForm";
+import EditDataForm from "./components/form/editDataform";
+import { notifications } from '@mantine/notifications';
 
 export default function ProductPage() {
   const [page, setPage] = useState(1);
@@ -32,10 +32,10 @@ export default function ProductPage() {
       if (response.status === 200) {
         setIsOpenDelete(false);
         refetch();
-        // notifications.show({
-        //   title: 'Success',
-        //   message: 'Success deleted data!',
-        // })
+        notifications.show({
+          title: 'Success',
+          message: 'Success deleted data!',
+        })
       }
     },
     onError: () => {
@@ -155,18 +155,18 @@ export default function ProductPage() {
           </Group>
         </Modal>
 
-        {/* <AddDataForm 
-          isOpen={isOpenAdd} 
-          onClose={()=>setIsOpenAdd(false)} 
+        <AddDataForm
+          isOpen={isOpenAdd}
+          onClose={() => setIsOpenAdd(false)}
           refetch={refetch}
         />
 
-        <EditDataForm 
-          isOpen={isOpenEdit} 
-          onClose={()=>setIsOpenEdit(false)} 
+        <EditDataForm
+          isOpen={isOpenEdit}
+          onClose={() => setIsOpenEdit(false)}
           refetch={refetch}
           detailData={detailData}
-        /> */}
+        />
       </Layout>
     </>
   )
