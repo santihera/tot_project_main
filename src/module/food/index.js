@@ -12,7 +12,7 @@ import { notifications } from '@mantine/notifications';
 export default function FoodPage() {
     const [page, setPage] = useState(1);
     const [skip, setSkip] = useState(0);
-    const [idProduct, setIdFood] = useState(null);
+    const [idFood, setIdFood] = useState(null);
     const [isOpenDelete, setIsOpenDelete] = useState(false);
     const [isOpenAdd, setIsOpenAdd] = useState(false);
     const [isOpenEdit, setIsOpenEdit] = useState(false);
