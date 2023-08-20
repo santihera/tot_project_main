@@ -5,22 +5,22 @@ export async function getFoods(skip, createdBy) {
     return data;
 }
 
-export async function getFoods(id) {
+export async function getFood(id) {
     const data = await API.get(`/foods/${id}`)
     return data;
 }
 
-export async function addFoods(params) {
+export async function addFood(params) {
     const data = await API.post(`/add-foods`, params)
     return data;
 }
 
-export async function editFoods(id, params) {
+export async function editFood(id, params) {
     const data = await API.put(`/edit-foods?id=${id}`, params)
     return data;
 }
 
-export async function deleteFoods(id) {
+export async function deleteFood(id) {
     const data = await API.delete(`/delete-foods?id=${id}`)
     return data;
 }
