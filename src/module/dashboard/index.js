@@ -5,7 +5,8 @@ export default function DashboardPage() {
     <>
       <Layout title='Dashboard Page'>
         <main>
-          <p>Halaman Dashboard Page</p>
+          <h2><p>Dashboard Page</p></h2>
+          <p>Welcome, Get Familiar With the Dashboard, here are some ways to get started.</p>
         </main>
       </Layout>
     </>
