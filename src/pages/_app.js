@@ -37,6 +37,7 @@ export default function App(props) {
           colorScheme: 'light',
         }}
       >
+        <Notifications />
         <QueryClientProvider client={QueryClients}>
           <Hydrate state={pageProps.dehydratedState}>
             <Component {...pageProps} />
